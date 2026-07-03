@@ -1,0 +1,22 @@
+.second
+{
+    background-color: blueviolet;
+    color:white;
+    padding:20px;
+}
+h2{
+    color:blue !important;
+}
+
+.page
+{
+    width:1200px;
+    height: 400px;
+    background-color: aquamarine;
+}
+
+*{
+     margin:0 auto;
+     padding:0;
+     
+}
