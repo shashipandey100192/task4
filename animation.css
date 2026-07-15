@@ -1,0 +1,53 @@
+.first
+{
+    width:200px;
+    height: 200px;
+    background-color: aquamarine;
+    border:2px solid red;
+    text-align: center;
+    /* animation-name: abc;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: alternate;
+    animation-timing-function: ease-in;
+    animation-delay: 1s; */
+
+    animation:abc 3s infinite alternate 1s linear;
+
+}
+
+/* @keyframes abc {
+        from{}
+        to{margin-left:1000px; box-shadow: 5px 8px 20px black;margin-top:200px;width: 100px;}
+
+} */
+
+
+
+@keyframes abc {
+        0%{margin-top:0;}
+        50%{margin-left:800px}
+        80%{margin-left:200px;background-color: red;border-radius: 50px;}
+        100%{margin-left: 1200px;}
+
+}
+
+
+section
+{
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+    transition-duration: 1s;
+}
+section:hover
+{
+    width:500px;
+    height: 300px;
+    background-color: aquamarine;
+    font-size: 30px;
+    transition:width;
+    transition-duration: 2s;
+
+}
