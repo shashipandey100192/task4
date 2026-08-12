@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        ul li,input{
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li> <input type="text" placeholder="first no" id="one"></li>
+    <li> <input type="text" placeholder="second no" id="two"></li>
+    <li> <input type="text" placeholder="result" id="three"></li>
+    <li> <input type="button" value="calculate" onclick=" myfunc()"></li>
+</ul>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<script>
+function myfunc()
+{
+    var x = document.querySelectorAll("div");
+    var a,b,c;
+    a = parseFloat(document.getElementById('one').value);
+     b= parseFloat(document.getElementById('two').value);
+     document.getElementById("three").value=a+b;
+    console.log(x);
+    console.log(typeof x);
+    x[0].innerHTML = a+b;
+
+}
+
+</script>
+    
+</body>
+</html>

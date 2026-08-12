@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul>
+        <li><input type="text" placeholder="first no"> </li>
+        <li><input type="text" placeholder="second no"> </li>
+        <li>
+            <select>
+                <option hidden>select methods</option>
+                <option>sum</option>
+                <option>sub</option>
+                <option>multi</option>
+                <option>divide</option>
+            </select>
+        </li>
+        <li><input type="text" placeholder="result"> </li>
+        <li><input type="button" value="calculate" onclick="abc()"> </li>
+    </ul>
+
+    <button type="button" onclick="xyz()">submit</button>
+
+
+
+
+    <script>
+
+        function abc() {
+            var opt;
+            var allinput;
+            opt = document.querySelector("select");
+            allinput = document.querySelectorAll("input");
+            console.log(allinput);
+            console.log(opt);
+
+            if (opt.value == "sub") {
+                allinput[2].value = allinput[0].value - allinput[1].value;
+            }
+            else if (opt.value == "sum") {
+                allinput[2].value = parseFloat(allinput[0].value) + parseFloat(allinput[1].value);
+            }
+            else if (opt.value == "divide") {
+                allinput[2].value = allinput[0].value / allinput[1].value;
+            }
+            else if (opt.value == "multi") {
+                allinput[2].value = allinput[0].value * allinput[1].value;
+            }
+            else {
+                alert("please select operation");
+            }
+
+
+        }
+
+
+        function xyz() {
+            // alert("welcome to javascript"); console.log("welcome")
+            var c = 90;
+            if (c >= 60) {
+                alert("first");
+            }
+            else if (c >= 80) {
+                alert("second");
+            }
+            else {
+                alert("nothing");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
