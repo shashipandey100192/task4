@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Count Number: <span>0:0</span></h1>
+    <select>
+        <option>ans1</option>
+        <option>ans1</option>
+        <option>ans1</option>
+
+    </select>
+    <hr>
+    <!-- <input type="button" value="count" onclick="abc()"> -->
+
+    <script>
+        //     var a=60;
+        // function abc()
+        // {
+        //     var jele = document.getElementsByTagName("span");
+        //     jele[0].innerHTML=a;
+        //     a--;
+        // }
+        // setInterval("abc()",1000);
+
+
+
+
+        var a = 10;
+        var jselect = document.querySelector("select");
+        function abc() {
+            var jele = document.getElementsByTagName("span");
+            jele[0].innerHTML = a;
+            a--;
+            if (a == 0) {
+                ans();
+                clearInterval(b);
+            }
+        }
+        var b = setInterval("abc()", 1000);
+
+
+function ans()
+{
+    jselect.setAttribute("disabled","disabled");
+}
+
+
+    </script>
+
+
+</body>
+
+</html>
