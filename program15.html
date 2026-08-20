@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theams {
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body onresize="abc()">
+
+    <h1>screen object </h1>
+
+    <div> </div>
+
+    <script>
+
+var jbody;
+var mylocatin = window.location;
+console.log(mylocatin);
+        function abc() {
+            jbody = document.querySelector("body");
+            var a = screen;
+            console.log(a);
+            var myte = document.querySelector("div");
+            myte.innerHTML = `
+                <h4> width: ${a.width}</h4>
+                <h4> height: ${a.height}</h4>
+                <h4> type : ${a.orientation.type}</h4>
+            `;
+
+            
+            if (a.width <= 500) {
+                // document.bgColor="orange";
+                
+                jbody.classList.add('theams');
+            }
+            else {
+                jbody.classList.remove("theams");
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

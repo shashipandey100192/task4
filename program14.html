@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1></h1>
+
+    <script>
+
+        function mydates() {
+
+            var a = new Date();
+            console.log(a);
+            console.log(typeof a);
+            var m = a.getMinutes();
+            var s = a.getSeconds();
+            var h = a.getHours();
+            var y = a.getFullYear();
+
+            var mytime = `${h}:${m}:${s} | ${y}`;
+
+            var head = document.querySelector("h1");
+            head.innerHTML = mytime;
+
+            if (m == 5) {
+                changeback()
+            }
+
+            if(h===16 && m==6 && s>=0)
+            {
+                chan1();
+            }
+        }
+
+        setInterval("mydates()", 1000);
+
+
+        function changeback() {
+            document.bgColor = "red";
+        }
+
+        function chan1()
+        {
+            window.location.href="http://yarpadlo.in";
+        }
+
+        
+
+    </script>
+
+</body>
+
+</html>
