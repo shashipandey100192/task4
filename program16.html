@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mycap {
+            font-size: 80px;
+            color: green;
+            font-family: arial black;
+            letter-spacing: 10px;
+        }
+
+        input {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mycap"></div>
+    <input type="text" id="myotp" maxlength="4">
+    <input type="button" value="varify" disabled>
+
+    <script>
+
+        var myinput;
+        var mydiv;
+        var a;
+        function abc() {
+            myinput = document.querySelectorAll("input");
+            mydiv = document.querySelector("div");
+            a = parseInt((Math.random() + 1) * 4562);
+            console.log(a);
+            mydiv.innerHTML = a;
+        }
+
+        abc();
+
+        myinput[0].addEventListener("input", () => {
+            var b = myinput[0].value;
+            console.log(b.length);
+            if (b.length == 4) {
+                myinput[1].removeAttribute("disabled");
+            }
+            else {
+                myinput[1].setAttribute("disabled", "disabled");
+            }
+
+        })
+
+
+
+        function otpVerify() {
+            if (myinput[0].value == a) {
+                alert("welcome");
+                window.location.href="file:///D:/classlist/weekday/6to7pm/javascript/program15.html"
+            }
+            else {
+                alert("otp wrong");
+                myinput[0].value = "";
+                myinput[0].focus();
+                abc();
+            }
+        }
+        myinput[1].addEventListener("click", otpVerify);
+    </script>
+
+
+</body>
+
+</html>

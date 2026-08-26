@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mycap {
+            font-size: 90px;
+            letter-spacing: 20px;
+            font-style: italic;
+            font-weight: bolder;
+            /* border: 1px solid red; */
+            width: 376px;
+            padding: 10px;
+            background-image: url("https://img.magnific.com/free-vector/abstract-organic-pattern-design-background_1048-19286.jpg?semt=ais_hybrid&w=740&q=80");
+            background-size: 100% 100%;
+        }
+        .mycap section
+        {
+            color:transparent;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLfIfluypzAeUh3-cQOuDmTijnFSoJtU7R8BCwHFMZ8z6SNhm87mIYfDvG&s=10");
+            background-clip: text;
+        }
+        .mycap section span:nth-child(2)
+        {
+            margin-top:-10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mycap">
+        <section></section>
+    </div>
+
+    <script>
+
+
+        var a = new String("Qsertf547455734d6d9d7f5c2s6a9sdasd874ghgh87oio98054521fg545$7396dDR4F4wF6R92145cmfhhgrff");
+        function xyz() {
+
+            // var b = "this is my text";
+            // var b =new String("this is my text");
+            // console.log(a);
+            // console.log(typeof a);
+
+            var gen = parseInt((Math.random() + 1) * 13);
+            var i = gen;
+            var c = a.slice(i, i + 6);
+            var mytextboj = new String(c);
+            console.log(mytextboj);
+            var myspan = `<span>${mytextboj[0]}</span><sup>${mytextboj[1]}</sup><span>${mytextboj[2]}</span><sub>${mytextboj[3]}</sub><span>${mytextboj[4]}</span><span>${mytextboj[5]}</span>`;
+
+
+            var mydiv = document.querySelector("section");
+            mydiv.innerHTML = myspan;
+
+        }
+
+        xyz();
+
+    </script>
+
+
+</body>
+
+</html>
