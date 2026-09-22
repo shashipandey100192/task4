@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+var count=1;
+function xyz()
+{
+count++;
+        var course = prompt("enter course name");
+
+
+        switch (course) {
+            case "mern":
+                alert("welcome to: " + course);
+                studentDetails();
+                break;
+            case "java":
+                alert("welcome to: " + course);
+                studentDetails();
+                break;
+            case "py":
+                alert("welcome to: " + course);
+                studentDetails();
+                break;
+            default:
+                alert("this is not valid:" + course + "count number"+count);
+                if(count==4)
+                {
+                alert("ok");
+                }
+                else
+                {
+                    xyz();
+                }
+        }
+
+        var sname, age, email;
+        function studentDetails() {
+            sname = prompt("enter name");
+            age = prompt("enter age");
+            email = prompt("enter email");
+            courseOffer();
+        }
+
+        var dis,fees;
+        function courseOffer() {
+            if (course == "mern") {
+                dis = "20%";
+                fees=prompt("enter fees amount");
+            }
+            else if (course == "java") {
+                dis = "10%";
+                fees=prompt("enter fees amount");
+            }
+            else {
+                dis = "0%";
+                fees=prompt("enter fees amount");
+            }
+            alert(dis);
+            discountsection();
+
+        }
+
+var disamount;
+function discountsection()
+{
+    switch(true)
+    {
+        case fees>=8000:
+        disamount = fees*80/100;
+        alert(disamount);
+        break;
+
+        case fees>=6000:
+        disamount = fees*80/100;
+        alert(disamount);
+        break;
+        
+        case fees>=4000:
+        disamount = fees*80/100;
+        alert(disamount);
+        break;
+
+        default:
+            alert("nothing selected");
+    }
+}
+
+
+}
+xyz();
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
