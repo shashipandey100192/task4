@@ -1,0 +1,13 @@
+.cbg
+{
+        background: linear-gradient(#47a2dc, #9b62bc);
+}
+.cmt
+{
+        margin-top:80px;
+}
+.cminh
+{
+        min-height: 90vh;
+        max-height: fit-content;
+}
